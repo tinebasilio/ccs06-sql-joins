@@ -11,7 +11,7 @@ class Department
         global $conn;
 
         try {
-            $sql = "SELECT * FROM departments";
+            $sql = "SELECT * FROM departments LIMIT 5";
 
             $statement = $conn->prepare($sql);
             $statement->execute();

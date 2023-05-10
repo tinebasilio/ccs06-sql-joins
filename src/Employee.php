@@ -11,7 +11,7 @@ class Employee
         global $conn;
 
         try {
-            $sql = "SELECT * FROM employees";
+            $sql = "SELECT * FROM employees LIMIT 5";
 
             $statement = $conn->prepare($sql);
             $statement->execute();
