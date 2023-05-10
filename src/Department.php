@@ -11,7 +11,7 @@ class Department
         global $conn;
 
         try {
-            $sql = "";
+            $sql = "SELECT * FROM departments";
 
             $statement = $conn->prepare($sql);
             $statement->execute();
@@ -25,5 +25,7 @@ class Department
         } catch (Exception $e) {
             error_log($e->getMessage());
         }
+
+        return null;
     }
 }

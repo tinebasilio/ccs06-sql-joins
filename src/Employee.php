@@ -11,7 +11,7 @@ class Employee
         global $conn;
 
         try {
-            $sql = "";
+            $sql = "SELECT * FROM employees";
 
             $statement = $conn->prepare($sql);
             $statement->execute();
@@ -25,5 +25,7 @@ class Employee
         } catch (Exception $e) {
             error_log($e->getMessage());
         }
+
+        return null;
     }
 }
