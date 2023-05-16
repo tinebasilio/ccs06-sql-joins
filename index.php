@@ -12,6 +12,42 @@ $depts = Department::list();
 <html>
 <head>
    <title>List of Departments</title>
+      <style>
+      body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 20px;
+      }
+
+      table {
+         width: 100%;
+         border-collapse: collapse;
+      }
+
+      th, td {
+         padding: 10px;
+         text-align: left;
+         border-bottom: 1px solid #ddd;
+      }
+
+      th {
+         background-color: #f5f5f5;
+         font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+         background-color: #f9f9f9;
+      }
+
+      tr:hover {
+         background-color: #f5f5f5;
+      }
+
+      a {
+         text-decoration: none;
+         color: #007bff;
+      }
+   </style>
 </head>
 <body>
    <h1>List of Departments</h1>
