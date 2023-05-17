@@ -13,6 +13,7 @@ if (isset($_GET['dept_no'])) {
 <!DOCTYPE html>
 <html>
 <head>
+   <title>List of Employees per Department</title>
       <style>
       body {
          font-family: Arial, sans-serif;
@@ -56,7 +57,6 @@ if (isset($_GET['dept_no'])) {
       // Retrieve the list of employees in the department
       $emps = Employee::listByDepartment($dept_no);
 
-      // Display the table headers
       echo "<table>";
       echo "<tr><th>Employee Title</th><th>Employee Name</th><th>Birthday</th><th>Age</th><th>Gender</th><th>Hire Date</th><th>Latest Salary</th><th>Link</th></tr>";
 
@@ -90,7 +90,6 @@ if (isset($_GET['dept_no'])) {
          $statement->bindValue(':emp_no', $emp['emp_no']);
          $statement->execute();
 
-         // Display employee information in each table row
          echo "<tr>";
          echo "<td>{$emp['title']}</td>";
          echo "<td>{$emp['employee_name']}</td>";
